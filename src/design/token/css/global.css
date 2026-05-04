@@ -1,0 +1,179 @@
+@import 'tailwindcss';
+@import './generated.css';
+
+:root[data-theme='light'] {
+  --background              : var(--color-role-background-light);
+  --foreground              : var(--color-role-foreground-light);
+  --accent                  : var(--color-role-accent-light);
+  --border-color            : var(--color-role-border-light);
+  --color-brand             : var(--color-palette-brand);
+  --color-ds-white          : var(--color-palette-white);
+  --color-ds-red            : var(--color-palette-red);
+  --color-ds-blue           : var(--color-palette-blue);
+  --color-ds-dark-red       : var(--color-palette-dark-red);
+  --color-ds-dark-blue      : var(--color-palette-dark-blue);
+  --color-ds-darker-red     : var(--color-palette-darker-red);
+  --color-ds-darker-blue    : var(--color-palette-darker-blue);
+  --color-default-bg        : var(--color-intent-default-bg-light);
+  --color-default-fg        : var(--color-intent-default-fg-light);
+  --color-default-border    : var(--color-intent-default-border-light);
+  --color-destructive-bg    : var(--color-intent-destructive-bg-light);
+  --color-destructive-fg    : var(--color-intent-destructive-fg-light);
+  --color-destructive-border: var(--color-intent-destructive-border-light);
+  --surface-1-bg            : var(--surface-1-bg-light);
+  --surface-1-fg            : var(--surface-1-fg-light);
+  --surface-1-border        : var(--surface-1-border-light);
+  --shadow-lg               : var(--surface-1-shadow);
+  --surface-2-bg            : var(--surface-2-bg-light);
+  --surface-2-fg            : var(--surface-2-fg-light);
+  --surface-2-border        : var(--surface-2-border-light);
+  --surface-2-shadow        : var(--surface-2-shadow);
+  --surface-3-bg            : var(--surface-3-bg-light);
+  --surface-3-fg            : var(--surface-3-fg-light);
+  --surface-3-border        : var(--surface-3-border-light);
+  --surface-3-shadow        : var(--surface-3-shadow);
+  --line-height-body        : var(--font-line-height-base);
+
+  --card-height             : var(--component-card-height);
+  --home-title-height       : var(--component-page-home-title-height);
+  --home-cards-rows         : var(--component-page-cards-rows);
+  --home-cards-height       : calc(var(--home-cards-rows) * var(--card-height) + var(--spacing-xl) * 2 + var(--home-title-height) + var(--spacing-xl));
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --text-xs         : var(--font-size-xs);
+  --text-sm         : var(--font-size-sm);
+  --text-md         : var(--font-size-md);
+  --text-lg         : var(--font-size-lg);
+  --text-xl         : var(--font-size-xl);
+  --text-2xl        : var(--font-size-2xl);
+
+  --spacing-xs      : var(--space-xs);
+  --spacing-sm      : var(--space-sm);
+  --spacing-md      : var(--space-md);
+  --spacing-lg      : var(--space-lg);
+  --spacing-xl      : var(--space-xl);
+
+  --radius-xs       : calc(var(--radius) - 6px);
+  --radius-sm       : calc(var(--radius) - 4px);
+  --radius-md       : calc(var(--radius) - 2px);
+  --radius-lg       : calc(var(--radius) - 0.5px);
+  --radius-xl       : calc(var(--radius) + 2px);
+
+  --padding-xs      : var(--space-xs);
+  --padding-sm      : var(--space-sm);
+  --padding-md      : var(--space-md);
+  --padding-lg      : var(--space-lg);
+  --padding-xl      : var(--space-xl);
+
+  --margin-xs       : var(--space-xs);
+  --margin-sm       : var(--space-sm);
+  --margin-md       : var(--space-md);
+  --margin-lg       : var(--space-lg);
+  --margin-xl       : var(--space-xl);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background              : var(--color-role-background-dark);
+    --foreground              : var(--color-role-foreground-dark);
+    --accent                  : var(--color-role-accent-dark);
+    --color-default-bg        : var(--color-intent-default-bg-dark);
+    --color-default-fg        : var(--color-intent-default-fg-dark);
+    --color-default-border    : var(--color-intent-default-border-dark);
+    --color-destructive-bg    : var(--color-intent-destructive-bg-dark);
+    --color-destructive-fg    : var(--color-intent-destructive-fg-dark);
+    --color-destructive-border: var(--color-intent-destructive-border-dark);
+    --border-color            : var(--color-role-border-dark);
+    --surface-1-bg            : var(--surface-1-bg-dark);
+    --surface-1-fg            : var(--surface-1-fg-dark);
+    --surface-1-border        : var(--surface-1-border-dark);
+    --surface-2-bg            : var(--surface-2-bg-dark);
+    --surface-2-fg            : var(--surface-2-fg-dark);
+    --surface-2-border        : var(--surface-2-border-dark);
+    --surface-3-bg            : var(--surface-3-bg-dark);
+    --surface-3-fg            : var(--surface-3-fg-dark);
+    --surface-3-border        : var(--surface-3-border-dark);
+  }
+}
+
+:root[data-theme='dark'] {
+  --background              : var(--color-role-background-dark);
+  --foreground              : var(--color-role-foreground-dark);
+  --accent                  : var(--color-role-accent-dark);
+  --border-color            : var(--color-role-border-dark);
+  --color-default-bg        : var(--color-intent-default-bg-dark);
+  --color-default-fg        : var(--color-intent-default-fg-dark);
+  --color-default-border    : var(--color-intent-default-border-dark);
+  --color-destructive-bg    : var(--color-intent-destructive-bg-dark);
+  --color-destructive-fg    : var(--color-intent-destructive-fg-dark);
+  --color-destructive-border: var(--color-intent-destructive-border-dark);
+  --surface-1-bg            : var(--surface-1-bg-dark);
+  --surface-1-fg            : var(--surface-1-fg-dark);
+  --surface-1-border        : var(--surface-1-border-dark);
+  --surface-2-bg            : var(--surface-2-bg-dark);
+  --surface-2-fg            : var(--surface-2-fg-dark);
+  --surface-2-border        : var(--surface-2-border-dark);
+  --surface-3-bg            : var(--surface-3-bg-dark);
+  --surface-3-fg            : var(--surface-3-fg-dark);
+  --surface-3-border        : var(--surface-3-border-dark);
+  --card-height             : var(--component-card-height);
+  --home-title-height       : var(--component-page-home-title-height);
+  --home-cards-rows         : var(--component-page-cards-rows);
+  --home-cards-height       : calc(var(--home-cards-rows) * var(--card-height) + var(--spacing-xl) * 2 + var(--home-title-height) + var(--spacing-xl));
+}
+
+@layer utilities {
+  .container {
+    @apply w-full max-w-400 mx-auto;
+    padding-inline: var(--spacing-md);
+  }
+
+  .section {
+    padding-block: var(--spacing-lg);
+  }
+
+  .stack {
+    display       : flex;
+    flex-direction: column;
+    gap           : var(--spacing-md);
+  }
+
+  .inline {
+    display    : flex;
+    align-items: center;
+    gap        : var(--spacing-sm);
+  }
+
+  .cluster {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    gap            : var(--spacing-md);
+  }
+
+  .grid {
+    display              : grid;
+    gap                  : var(--spacing-md);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .header {
+    padding-block: var(--spacing-sm);
+  }
+}
+
+body {
+  background : var(--background);
+  color      : var(--foreground);
+  font-family: var(--font-family-sans);
+  line-height: var(--font-line-height-base);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
