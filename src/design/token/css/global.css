@@ -151,8 +151,47 @@
   .cluster {
     display        : flex;
     align-items    : center;
+    justify-content: flex-start;
+    gap            : var(--spacing-lg);
+  }
+
+  .nav-wrapper {
+    display        : flex;
+    flex           : 1;
+    align-items    : center;
     justify-content: space-between;
-    gap            : var(--spacing-md);
+    min-width      : 0;
+  }
+
+  .nav-menu {
+    display    : flex;
+    align-items: center;
+    gap        : var(--spacing-xl);
+  }
+
+  .league-menu {
+    display    : flex;
+    align-items: center;
+    gap        : var(--spacing-xl);
+    color      : var(--foreground);
+    font-weight: var(--font-weight-bold);
+    white-space: nowrap;
+  }
+
+  .league-avatar {
+    width        : var(--icon-md);
+    height       : var(--icon-md);
+    border-radius: var(--radius-xs);
+    background   : var(--color-palette-gray-300);
+  }
+
+  .button {
+    padding-bottom: var(--spacing-xs);
+    padding-top   : var(--spacing-xs);
+    padding-right : var(--spacing-md);
+    padding-left  : var(--spacing-md);
+    border-radius : var(--radius-xs);
+
   }
 
   .grid {
@@ -170,10 +209,46 @@ body {
   background : var(--background);
   color      : var(--foreground);
   font-family: var(--font-family-sans);
+  font-size  : var(--font-size-md);
   line-height: var(--font-line-height-base);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family : "Iosevka Charon";
+  src         : url("/font/iosevka/IosevkaCharon-Light.ttf") format("truetype");
+  font-weight : 300;
+  font-style  : normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Iosevka Charon";
+  src: url("/font/iosevka/IosevkaCharon-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Iosevka Charon";
+  src: url("/font/iosevka/IosevkaCharon-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Iosevka Charon";
+  src: url("/font/iosevka/IosevkaCharon-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Iosevka Charon";
+  src: url("/font/iosevka/IosevkaCharon-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
 }
