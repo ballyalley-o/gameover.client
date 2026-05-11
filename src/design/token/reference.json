@@ -2,13 +2,31 @@
     "color": {
         "palette": {
             "brand": {
-                "value": "#387DFF"
+                "value": "#FFCF11"
             },
             "white": {
-                "value": "#F2F2F2"
+                "value": "#F2EED8"
             },
             "black": {
-                "value": "#030303"
+                "value": "#0E0E10"
+            },
+            "background": {
+                "value": "#363636"
+            },
+            "foreground": {
+                "value": "#F2EED8"
+            },
+            "surface": {
+                "value": "#3D3D3D"
+            },
+            "surface-elevated": {
+                "value": "#444444"
+            },
+            "text": {
+                "value": "#F2EED8"
+            },
+            "text-secondary": {
+                "value": "#9A9990"
             },
             "blue": {
                 "value": "#387DFF"
@@ -18,6 +36,18 @@
             },
             "darker-blue": {
                 "value": "#323948"
+            },
+            "accent": {
+                "value": "#FFCF11"
+            },
+            "success": {
+                "value": "#C3FF00"
+            },
+            "warning": {
+                "value": "#FFAC11"
+            },
+            "error": {
+                "value": "#E82818"
             },
             "red": {
                 "value": "#F10010"
@@ -37,25 +67,28 @@
             "gray-500": {
                 "value": "#979797"
             },
+            "gray-600": {
+                "value": "#1B1B1B"
+            },
             "gray-700": {
-                "value": "#374151"
+                "value": "#141414"
             }
         },
         "role": {
             "background": {
                 "light": {
-                    "value": "{color.palette.white}"
+                    "value": "{color.palette.surface}"
                 },
                 "dark": {
-                    "value": "{color.palette.gray-500}"
+                    "value": "{color.palette.gray-700}"
                 }
             },
             "foreground": {
                 "light": {
-                    "value": "{color.palette.dark-blue}"
+                    "value": "{color.palette.text}"
                 },
                 "dark": {
-                    "value": "{color.palette.white}"
+                    "value": "{color.palette.text}"
                 }
             },
             "accent": {
@@ -105,7 +138,7 @@
             "destructive": {
                 "bg": {
                     "light": {
-                        "value": "{color.palette.dark-red}"
+                        "value": "{color.palette.error}"
                     },
                     "dark": {
                         "value": "{color.palette.red}"
@@ -121,7 +154,7 @@
                 },
                 "border": {
                     "light": {
-                        "value": "{color.palette.red}"
+                        "value": "{color.palette.error}"
                     },
                     "dark": {
                         "value": "{color.palette.dark-red}"
@@ -154,6 +187,15 @@
         "xl": {
             "value": "16px",
             "type": "dimension"
+        },
+
+        "4xl": {
+            "value": "32px",
+            "type": "dimension"
+        },
+        "6xl": {
+            "value": "40px",
+            "type": "dimension"
         }
     },
     "space": {
@@ -175,6 +217,10 @@
         },
         "xl": {
             "value": "24px",
+            "type": "dimension"
+        },
+        "2xl": {
+            "value": "32px",
             "type": "dimension"
         }
     },
@@ -303,12 +349,15 @@
     "font": {
         "family": {
             "sans": {
-                "value": "JetBrains Mono, Arial, sans-serif"
+                "value": "\"Iosevka Charon\", Arial, sans-serif"
             }
         },
         "size": {
-            "xs": {
+            "2xs": {
                 "value": "0.675rem"
+            },
+            "xs": {
+                "value": "0.750rem"
             },
             "sm": {
                 "value": "0.875rem"
