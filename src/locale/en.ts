@@ -39,6 +39,12 @@ export const en = {
     membership_processed: 'Membership already processed',
     owner_no_myleague   : 'No MyLeague created'
   },
+  nav: {
+    dashboard: 'Dashboard',
+    draft_room: 'Draft Room',
+    player_stats: 'Player Stats'
+
+  },
   validation: {
     default: {
       invalid   : 'Invalid {field}',

@@ -50,5 +50,10 @@ export const es = {
     "membership_expired": "Membresía caducada",
     "membership_processed": "Membresía ya procesada",
     "draft_started": "La fecha del draft ya comenzó"
+  },
+  "nav": {
+    "dashboard": "Panel",
+    "draft_room": "Sala de borrador",
+    "player_stats": "Estadísticas del jugador"
   }
 } as const

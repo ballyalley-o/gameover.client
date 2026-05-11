@@ -50,5 +50,10 @@ export const fr = {
     "membership_expired": "Adhésion expirée",
     "membership_processed": "Adhésion déjà traitée",
     "draft_started": "La date de draft a déjà commencé"
+  },
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "draft_room": "Salle des courants d'air",
+    "player_stats": "Statistiques des joueurs"
   }
 } as const
