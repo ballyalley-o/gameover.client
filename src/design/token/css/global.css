@@ -78,7 +78,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background              : var(--color-role-background-dark);
+    --background              : var(--color-role-background-light);
     --foreground              : var(--color-role-foreground-dark);
     --accent                  : var(--color-role-accent-dark);
     --color-default-bg        : var(--color-intent-default-bg-dark);
