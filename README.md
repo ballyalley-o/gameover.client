@@ -1,160 +1,82 @@
-# Gameover
+# Gameover Client
 
+![Cover photo](./public/asset/gameover.png)
 
-## ✅ Design System Linting
+A React + TypeScript frontend built with Vite for the Gameover sports league experience.
 
-Use this like a **PR checklist** or quick self-review before committing.
+Gameover is a TypeScript-powered fantasy basketball backend with a React frontend. It combines secure Express APIs, PostgreSQL via drizzle-orm, NBA data routing, and league management features for sign-in, drafts, rosters, memberships, and team trades.
 
----
+## Overview
 
-## 🔍 1. TOKEN USAGE
+This repo contains the client-side application for a sports league UI. It uses modern frontend tooling and design tokens to deliver a fast development workflow and consistent styling.
 
-- [ ] Am I using `var(--spacing-*)` instead of raw Tailwind spacing?
-- [ ] Did I avoid `p-*`, `m-*`, `gap-*`, `px-*`, `py-*` utilities?
-- [ ] Am I NOT hardcoding pixel values (e.g. `16px`, `24px`)?
+## Key technologies
 
-🚫 Fail examples:
-```tsx
-className="p-5 mt-6 gap-3"
-style={{ padding: '20px' }}
+- Vite
+- React 19
+- TypeScript 6
+- Tailwind CSS 4
+- Style Dictionary
+- Path aliases for cleaner imports
+
+## Scripts
+
+- `npm run dev` — start the Vite development server
+- `npm run build` — compile TypeScript and build the production bundle
+- `npm run preview` — preview the production build locally
+- `npm run lint` — run ESLint across the project
+- `npm run token` — generate design tokens via Style Dictionary
+
+## Project structure
+
+- `src/main.tsx` — application entry point
+- `src/app.tsx` — root app component
+- `src/config/` — app configuration and global settings
+- `src/design/` — design system and token CSS
+- `src/component/` — reusable UI components
+- `src/locale/` — translation and locale resources
+- `src/utility/` — shared helper functions and utilities
+- `src/typing/` — global type definitions
+
+## Path aliases
+
+This app uses aliases for cleaner imports.
+
+### TypeScript aliases (`tsconfig.app.json`)
+
+- `app` → `src/app.tsx`
+- `gameover/*` → `src/config/*`
+- `gameover.design` → `src/design/token/css/global.css`
+
+### Vite aliases (`vite.config.ts`)
+
+- `app` is mapped directly to `src/app.tsx`
+- `gameover/*` is mapped to `src/config/$1`
+- `gameover.design` is mapped to `src/design/token/css/global.css`
+
+> If you add or change alias paths, update both `tsconfig.app.json` and `vite.config.ts` so TypeScript and Vite stay in sync.
+
+## Development
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the dev server:
+   ```bash
+   npm run dev
+   ```
+3. Open the app in the browser at the URL shown by Vite.
+
+## Build and preview
+
+```bash
+npm run build
+npm run preview
 ```
 
----
+## Notes
 
-## 🧩 2. PRIMITIVE USAGE
-
-- [ ] Did I use `container` for page width/padding?
-- [ ] Did I use `section` for vertical page spacing?
-- [ ] Did I use `stack` for vertical gaps?
-- [ ] Did I use `inline` or `cluster` for horizontal layout?
-- [ ] Did I use `grid-auto` instead of manual grid spacing?
-
-🚫 Fail examples:
-```tsx
-<div className="flex flex-col gap-6">
-<div className="mt-10">
-```
-
----
-
-## ⚖️ 3. RESPONSIBILITY CHECK
-
-### Ask:
-> Is this layout or component spacing?
-
-- [ ] Layout spacing → handled by primitives
-- [ ] Component spacing → handled by tokens (inline style or internal CSS)
-
-🚫 Fail examples:
-```tsx
-<Card className="mb-6" />   // component affecting layout
-```
-
----
-
-## 📦 4. COMPONENT RULES
-
-- [ ] Does the component only control its **internal spacing**?
-- [ ] Does it avoid margins (`mt`, `mb`, etc.)?
-- [ ] Is spacing defined using tokens?
-
-✅ Good:
-```tsx
-<div style={{ padding: 'var(--spacing-md)' }} />
-```
-
-🚫 Bad:
-```tsx
-<div className="mt-6 p-4" />
-```
-
----
-
-## 🧱 5. PRIMITIVE PURITY
-
-- [ ] Am I avoiding mixing primitives with manual spacing?
-
-🚫 Fail:
-```tsx
-<div className="stack gap-2 mt-4">
-```
-
-✅ Pass:
-```tsx
-<div className="stack">
-```
-
----
-
-## 📏 6. SPACING SCALE CONSISTENCY
-
-- [ ] Am I mostly using `md` as default?
-- [ ] Am I limiting spacing sizes to 2–3 variants on this page?
-- [ ] Am I using `lg` only for sections?
-
-🚫 Fail:
-- Using `xs`, `sm`, `md`, `lg`, `xl` randomly in one view
-
----
-
-## 🧭 7. LAYOUT STRUCTURE
-
-- [ ] Does the page follow this structure?
-
-```
-Container
-  → Stack
-    → Section
-      → Content
-```
-
-- [ ] Did I avoid skipping layers (e.g. content directly inside container with margins)?
-
----
-
-## 🚫 8. ANTI-PATTERN SCAN
-
-Check for ANY of these:
-
-- [ ] `mt-*`, `mb-*`, `ml-*`, `mr-*`
-- [ ] `p-*`, `px-*`, `py-*`
-- [ ] `gap-*`
-- [ ] inline pixel values (`16px`, `24px`)
-- [ ] components pushing layout (`mb-6`, `mt-10`)
-
-👉 If ANY exist → refactor
-
----
-
-## 🧠 9. DECISION QUICK TEST
-
-Before adding spacing:
-
-> “Which primitive should handle this?”
-
-- If you hesitate → use `stack` or `section`
-- If it's inside a component → use tokens
-
----
-
-## 🟢 FINAL PASS CRITERIA
-
-You pass if:
-
-- [ ] No raw Tailwind spacing utilities exist
-- [ ] Layout is entirely controlled by primitives
-- [ ] Components only manage internal spacing
-- [ ] Spacing tokens are used everywhere
-- [ ] Page structure is predictable
-
----
-
-## 🔥 TL;DR CHECK (Fast Version)
-
-- [ ] No `p-*`, `m-*`, `gap-*`
-- [ ] Using `container`, `stack`, `section`
-- [ ] Components don’t use margins
-- [ ] Tokens everywhere
-- [ ] Default spacing = `md`
-
----
+- The project currently uses `vite.config.ts` for alias resolution, so `import App from 'app'` resolves correctly to `src/app.tsx`.
+- The design token CSS entry is imported via `gameover.design`, which points at the global theme CSS file.
+- Use `npm run token` whenever design tokens change.
