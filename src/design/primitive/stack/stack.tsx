@@ -2,7 +2,7 @@ import React from 'react'
 
 type StackProps = {
     children : React.ReactNode
-    gap     ?: AppValueScale
+    gap     ?: AppValueScaleType
 }
 
 const Stack = ({ children, gap = 'md' }: StackProps) => {
