@@ -32,7 +32,7 @@ const Header = ({ currScreen, onNavigate }: { currScreen: string, onNavigate: (s
                 </div>
                 <div className="league-menu">
                   <span>The Baller League</span>
-                  <div className="league-avatar" />
+                  <div className={"league-avatar"} />
                 </div>
               </div>
           </div>
