@@ -1,6 +1,7 @@
 import { NAV_DIR } from 'config'
 import { ASSET_DIR } from 'config/dir.config'
 import { Container } from 'design/primitive'
+import { transl } from 'utility'
 
 const Header = ({ currScreen, onNavigate }: { currScreen: string, onNavigate: (screen: string) => void } ) => {
   return (
