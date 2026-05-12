@@ -5,7 +5,7 @@ import { transl } from 'utility'
 
 const Header = ({ currScreen, onNavigate }: { currScreen: string, onNavigate: (screen: string) => void } ) => {
   return (
-    <nav className={"z-40 sticky bg-background"}>
+    <nav className={"z-40 sticky bg-background border-b-2 border-gray-400/10"}>
         <Container>
           <div className={"cluster h-16"}>
               <div className={'inline'}>
@@ -27,11 +27,11 @@ const Header = ({ currScreen, onNavigate }: { currScreen: string, onNavigate: (s
                             ? "text-black"
                             : "text-muted-foreground hover:text-foreground hover:bg-white/5"
                         }`}>
-                        {_i.label}
+                        {transl(_i.labelKey)}
                       </button>
                     )})}
                 </div>
-                <div className="league-menu">
+                <div className={"league-menu"}>
                   <span>The Baller League</span>
                   <div className={"league-avatar"} />
                 </div>
