@@ -1,4 +1,4 @@
-import { GLOBAL } from 'config'
+import { GLOBAL } from './global.config'
 import { en, fr, es } from 'locale'
 
 export const locales = { en, fr, es } as const
