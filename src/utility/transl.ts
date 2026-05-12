@@ -8,8 +8,8 @@ type NestedKeys<T> = {
       : never
 }[keyof T & string]
 
-type LocaleLang = keyof typeof locales
-type LocaleKey = NestedKeys<AppLocale>
+type   LocaleLang     = keyof typeof locales
+export type LocaleKey = NestedKeys<AppLocale>
 
 /**
  * Retrieves a localized message based on the provided key and optional parameters.
