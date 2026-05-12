@@ -40,9 +40,27 @@ export const en = {
     owner_no_myleague   : 'No MyLeague created'
   },
   nav: {
-    dashboard: 'Dashboard',
-    draft_room: 'Draft Room',
-    player_stats: 'Player Stats'
+    dashboard   : 'Dashboard',
+    draft_room  : 'Draft Room',
+    player_stats: 'Player Stats',
+    sidebar: {
+      dashboard    : 'Dashboard',
+      league       : 'League',
+      league_lounge: 'League Lounge',
+      team         : 'Team',
+      player       : 'Player',
+      items        : {
+        standings     : 'Standings',
+        playoffs      : 'Playoffs',
+        calendar      : 'Calendar',
+        transactions  : 'Transactions',
+        power_rankings: 'Power Rankings',
+        news_feed     : 'News Feed',
+        roster        : 'Roster',
+        schedule      : 'Schedule',
+        stats         : 'Stats',
+      }
+    }
 
   },
   validation: {

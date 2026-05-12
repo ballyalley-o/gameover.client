@@ -54,6 +54,24 @@ export const es = {
   "nav": {
     "dashboard": "Panel",
     "draft_room": "Sala de borrador",
-    "player_stats": "Estadísticas del jugador"
+    "player_stats": "Estadísticas del jugador",
+    "sidebar": {
+      "league": "liga",
+      "team": "equipo",
+      "player": "Jugadora",
+      "items": {
+        "standings": "Clasificación",
+        "playoffs": "Eliminatorias",
+        "calendar": "Calendario",
+        "transactions": "Actas",
+        "power_rankings": "Clasificaciones de poder",
+        "news_feed": "Noticias",
+        "roster": "Lista",
+        "schedule": "Cronograma",
+        "stats": "Estadísticas"
+      },
+      "dashboard": "__MISSING__",
+      "league_lounge": "__MISSING__"
+    }
   }
 } as const
