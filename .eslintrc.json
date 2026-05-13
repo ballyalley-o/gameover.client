@@ -2,6 +2,12 @@
   "extends": ["react-app"],
   "rules": {
     "semi": ["off"],
-    "@typescript-eslint/semi": ["off"]
+    "@typescript-eslint/semi": ["off"],
+    "no-restricted-syntax": [
+      "error", {
+        "selector": "JSXAttribute[name.name='className'] Literal[value=/\\b(p|px|py|pt|pr|pb|pl|m|mx|my|mt|mr|mb|ml|gap|gap-x|gap-y)-/]",
+        "message" : "Use semantic spacing classes or design tokens instead of inline Tailwind spacing utilities."
+      }
+    ]
   }
 }
