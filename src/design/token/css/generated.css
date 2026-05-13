@@ -27,6 +27,7 @@
   --color-palette-gray-500: #979797;
   --color-palette-gray-600: #1B1B1B;
   --color-palette-gray-700: #141414;
+  --color-interaction-hover-1-bg: #F2EED81A;
   --radius-base: 8px;
   --radius-xs: 2px;
   --radius-sm: 4px;
@@ -72,6 +73,8 @@
   --component-page-home-title-height: 3rem;
   --component-page-cards-rows: 1;
   --component-card-height: 380px;
+  --color-interaction-active-1-bg: var(--color-palette-success);
+  --color-interaction-active-1-fg: var(--color-palette-black);
   --color-role-background-light: var(--color-palette-surface);
   --color-role-background-dark: var(--color-palette-gray-700);
   --color-role-foreground-light: var(--color-palette-text);
@@ -97,6 +100,12 @@
   --surface-2-shadow: var(--shadow-md);
   --surface-3-shadow: var(--shadow-lg);
   --border-radius: var(--radius-md);
+  --component-sidebar-padding-block: var(--space-md);
+  --component-sidebar-padding-inline: var(--space-lg);
+  --component-sidebar-item-padding-block: var(--space-xs);
+  --component-sidebar-item-padding-inline: var(--space-lg);
+  --component-sidebar-section-button-padding-block: var(--space-xs);
+  --component-sidebar-section-button-padding-inline: var(--space-md);
   --surface-1-bg-light: var(--color-role-background-light);
   --surface-1-bg-dark: var(--color-role-background-dark);
   --surface-1-fg-light: var(--color-role-foreground-light);
