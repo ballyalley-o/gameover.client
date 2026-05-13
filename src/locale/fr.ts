@@ -70,8 +70,8 @@ export const fr = {
         "schedule": "Calendrier",
         "stats": "Statistiques"
       },
-      "dashboard": "__MISSING__",
-      "league_lounge": "__MISSING__"
+      "dashboard": "Tableau de bord",
+      "league_lounge": "Salon de la Ligue"
     }
   }
 } as const

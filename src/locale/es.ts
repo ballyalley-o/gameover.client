@@ -70,8 +70,8 @@ export const es = {
         "schedule": "Cronograma",
         "stats": "Estadísticas"
       },
-      "dashboard": "__MISSING__",
-      "league_lounge": "__MISSING__"
+      "dashboard": "Panel",
+      "league_lounge": "Salón de la liga"
     }
   }
 } as const
