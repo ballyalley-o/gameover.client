@@ -74,6 +74,25 @@
                 "value": "#141414"
             }
         },
+        "interaction": {
+            "hover": {
+               "1" : {
+                    "bg": {
+                        "value": "#F2EED81A"
+                    }
+               }
+            },
+            "active": {
+                "1": {
+                    "bg": {
+                        "value": "{color.palette.success}"
+                    },
+                    "fg": {
+                        "value": "{color.palette.black}"
+                    }
+                }
+            }
+        },
         "role": {
             "background": {
                 "light": {
@@ -430,10 +449,29 @@
                 }
             }
         },
+        "sidebar": {
+            "padding-block" : { "value": "{space.md}" },
+            "padding-inline": { "value": "{space.lg}" },
+            "item"          : {
+                "padding-block" : { "value": "{space.xs}" },
+                "padding-inline": { "value": "{space.lg}" }
+            },
+            "section": {
+                "button-padding-block" : { "value": "{space.xs}" },
+                "button-padding-inline": { "value": "{space.md}" }
+            }
+        },
         "card": {
             "height": {
                 "value": "380px",
                 "type": "dimension"
+            }
+        },
+        "nav": {
+            "sidebar": {
+                "button": {
+
+                }
             }
         }
     }
