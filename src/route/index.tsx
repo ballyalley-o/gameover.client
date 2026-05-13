@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom"
 import App from 'app'
-import { DashboardPage } from "page"
+import { DashboardPage, LeaguePage } from "route/element"
 
 const router = createBrowserRouter([
     {
@@ -11,9 +11,17 @@ const router = createBrowserRouter([
                 index  : true,
                 path   : '/dashboard',
                 element: <DashboardPage />
+            },
+            {
+                path   : 'league',
+                element: <LeaguePage />
             }
         ]
-    }
+    },
+    // {
+    //     path   : "league",
+    //     element: <LeaguePage />
+    // }
 ])
 
 
