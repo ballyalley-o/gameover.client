@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom"
 import { transl } from "utility"
 
-const NavHeaderButton = ({ item, isActive }: { item: NavLabelType, isActive: boolean }) => {
+const NavHeaderButton = ({ item }: { item: NavLabelType }) => {
   return (
        <NavLink
             to={(item.to)}
-            className={isActive ? "nav-header-button button active": 'nav-header-button button'}>
+            className={({ isActive }) => isActive ? "nav-header-button button active": 'nav-header-button button'}>
             {transl(item.labelKey)}
         </NavLink>
   )
