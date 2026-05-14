@@ -73,5 +73,6 @@ export const fr = {
       "dashboard": "Tableau de bord",
       "league_lounge": "Salon de la Ligue"
     }
-  }
+  },
+  "back": "Dos"
 } as const

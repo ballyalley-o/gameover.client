@@ -73,5 +73,6 @@ export const es = {
       "dashboard": "Panel",
       "league_lounge": "Salón de la liga"
     }
-  }
+  },
+  "back": "Atrás"
 } as const

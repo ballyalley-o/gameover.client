@@ -1,4 +1,5 @@
 export const en = {
+  back   : 'Back',
   success: {
     user_created  : 'User created',
     user_deleted  : 'User deleted',
