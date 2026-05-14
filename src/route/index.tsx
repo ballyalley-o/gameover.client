@@ -1,6 +1,6 @@
-import { createBrowserRouter } from "react-router-dom"
+import { createBrowserRouter, Navigate } from "react-router-dom"
 import App from 'app'
-import { DashboardPage, LeaguePage } from "route/element"
+import { DashboardPage, LeaguePage, TeamPage } from "route/element"
 
 const router = createBrowserRouter([
     {
@@ -9,20 +9,22 @@ const router = createBrowserRouter([
         children: [
             {
                 index  : true,
-                path   : '/dashboard',
+                element: <Navigate to="/dashboard" replace />
+            },
+            {
+                path   : 'dashboard',
                 element: <DashboardPage />
             },
             {
-                path   : 'league',
+                path   : 'league/:section',
                 element: <LeaguePage />
+            },
+            {
+                path   : 'team/:section',
+                element: <TeamPage />
             }
         ]
-    },
-    // {
-    //     path   : "league",
-    //     element: <LeaguePage />
-    // }
+    }
 ])
-
 
 export default router
