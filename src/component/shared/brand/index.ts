@@ -1,0 +1,1 @@
+export { default as BrandNavLogo } from './brand-nav-logo'
