@@ -1,4 +1,4 @@
-import type { LocaleKey } from "utility"
+import { combine, type LocaleKey } from "utility"
 
 const _HEADER_DASHBOARD = [
     { id: 'dashboard', labelKey: 'nav.dashboard', to: '/dashboard' },
@@ -37,6 +37,8 @@ const _SIDEBAR_DEFAULT = [
 }[]
 
 export const NAV_DIR = {
-  HEADER : _HEADER_DASHBOARD,
-  SIDEBAR: _SIDEBAR_DEFAULT
+  ROOT     : '/',
+  DASHBOARD: combine('dashboard'),
+  HEADER   : _HEADER_DASHBOARD,
+  SIDEBAR  : _SIDEBAR_DEFAULT
 }
