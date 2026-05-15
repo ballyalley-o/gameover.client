@@ -212,6 +212,320 @@
     padding  : var(--spacing-lg);
   }
 
+  .dashboard-page {
+    display       : flex;
+    flex-direction: column;
+    gap           : var(--spacing-md);
+    min-width     : 0;
+  }
+
+  .score-strip {
+    display        : flex;
+    align-items    : stretch;
+    justify-content: space-between;
+    min-height     : 5.25rem;
+    border-radius  : var(--radius-xs);
+    background     : var(--color-palette-gray-400);
+    overflow       : hidden;
+  }
+
+  .score-board {
+    display              : grid;
+    grid-template-columns: repeat(2, 10rem);
+    align-self           : start;
+  }
+
+  .score-team {
+    display    : grid;
+    align-items: center;
+    column-gap : var(--spacing-sm);
+    grid-template-columns: var(--icon-md) 1fr auto auto;
+    min-height : 2.625rem;
+    padding    : var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .score-team strong {
+    font-weight: var(--font-weight-medium);
+  }
+
+  .score-team-blue {
+    background: var(--color-palette-blue);
+  }
+
+  .score-team-light {
+    background: var(--color-palette-gray-300);
+    color     : var(--color-palette-black);
+  }
+
+  .score-team-red {
+    background: var(--color-palette-red);
+  }
+
+  .score-team-gold {
+    background: color-mix(in srgb, var(--color-palette-brand) 86%, var(--color-palette-red));
+  }
+
+  .score-star,
+  .score-next {
+    color: var(--color-palette-brand);
+  }
+
+  .score-next {
+    width      : var(--icon-xl);
+    border     : 0;
+    background : transparent;
+    cursor     : pointer;
+    font-size  : var(--font-size-xl);
+    line-height: 1;
+  }
+
+  .team-badge {
+    display        : inline-flex;
+    align-items    : center;
+    justify-content: center;
+    width          : var(--icon-md);
+    height         : var(--icon-md);
+    border-radius  : var(--radius-xs);
+    background     : var(--color-palette-gray-600);
+    color          : var(--foreground);
+    font-size      : var(--font-size-2xs);
+    font-weight    : var(--font-weight-bold);
+  }
+
+  .team-badge-blue {
+    background: color-mix(in srgb, var(--color-palette-blue) 80%, var(--color-palette-black));
+  }
+
+  .team-badge-light {
+    background: var(--color-palette-white);
+    color     : var(--color-palette-black);
+  }
+
+  .team-badge-red {
+    background: color-mix(in srgb, var(--color-palette-red) 86%, var(--color-palette-black));
+  }
+
+  .team-badge-gold {
+    background: var(--color-palette-brand);
+    color     : var(--color-palette-black);
+  }
+
+  .dashboard-stats-grid {
+    display              : grid;
+    gap                  : var(--spacing-xl);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .metric-card {
+    min-height      : 7.25rem;
+  }
+
+  .metric-header,
+  .panel-header,
+  .dashboard-list-row,
+  .stat-row {
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    gap             : var(--spacing-md);
+  }
+
+  .metric-card strong {
+    display    : block;
+    margin-top : var(--spacing-lg);
+    font-size  : var(--font-size-2xl);
+    font-weight: var(--font-weight-regular);
+  }
+
+  .metric-trend-up {
+    color: var(--color-palette-success);
+  }
+
+  .metric-trend-down {
+    color: var(--color-palette-red);
+  }
+
+  .dashboard-actions {
+    display    : flex;
+    align-items: center;
+    gap        : var(--spacing-xl);
+  }
+
+  .dashboard-primary-action,
+  .dashboard-secondary-action {
+    display        : inline-flex;
+    align-items    : center;
+    justify-content: space-between;
+    min-width      : 12rem;
+    min-height     : 2.5rem;
+    padding-inline : var(--spacing-md);
+    border         : 0;
+    border-radius  : var(--radius-xs);
+    cursor         : pointer;
+    font           : inherit;
+  }
+
+  .dashboard-primary-action {
+    background : var(--color-palette-brand);
+    color      : var(--color-palette-black);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .dashboard-primary-action svg {
+    width : var(--icon-sm);
+    height: var(--icon-sm);
+  }
+
+  .dashboard-secondary-action {
+    background: var(--color-palette-surface);
+    color     : var(--foreground);
+  }
+
+  .dashboard-content-grid {
+    display              : grid;
+    gap                  : var(--spacing-md);
+    grid-template-columns: minmax(16rem, 0.95fr) minmax(24rem, 1.4fr) minmax(30rem, 1.75fr);
+    align-items          : stretch;
+  }
+
+  .power-panel,
+  .standings-panel,
+  .dashboard-side-grid {
+    min-height      : 36rem;
+    background-color: var(--color-palette-gray-400);
+  }
+
+  .dashboard-list {
+    margin-top: var(--spacing-md);
+  }
+
+  .dashboard-list-row,
+  .stat-row,
+  .standings-row {
+    min-height   : 2.5rem;
+    border-top   : var(--border-width) solid rgb(242 238 216 / 0.06);
+    color        : var(--color-palette-text-secondary);
+  }
+
+  .panel-header {
+    align-items: flex-start;
+  }
+
+  .panel-tabs {
+    display     : flex;
+    gap         : var(--spacing-md);
+    margin-right: auto;
+    color       : color-mix(in srgb, var(--color-palette-text-secondary) 55%, transparent);
+  }
+
+  .panel-tabs .active {
+    color: var(--color-palette-success);
+  }
+
+  .standings-table {
+    margin-top: var(--spacing-md);
+  }
+
+  .standings-row {
+    display              : grid;
+    align-items          : center;
+    grid-template-columns: minmax(12rem, 1fr) 3rem 3rem minmax(9rem, 1fr) 3rem;
+    gap                  : var(--spacing-md);
+  }
+
+  .dashboard-side-grid {
+    display              : grid;
+    gap                  : var(--spacing-md);
+    grid-template-columns: 1fr 1.85fr;
+    grid-template-rows   : auto 1fr;
+  }
+
+  .calendar-panel {
+    grid-column: 1 / -1;
+  }
+
+  .stat-table {
+    margin-top: var(--spacing-md);
+  }
+
+  .stat-row {
+    display              : grid;
+    grid-template-columns: 1fr auto auto;
+  }
+
+  .game-card-row {
+    display   : flex;
+    gap       : var(--spacing-sm);
+    margin-top: var(--spacing-xl);
+    overflow-x: auto;
+  }
+
+  .game-card {
+    display       : flex;
+    flex-direction: column;
+    gap           : var(--spacing-sm);
+    min-width     : 9rem;
+    min-height    : 12rem;
+    padding       : var(--spacing-md);
+    border        : var(--border-width) solid rgb(242 238 216 / 0.06);
+    border-radius : var(--radius-xs);
+    background    : color-mix(in srgb, var(--color-palette-gray-600) 45%, transparent);
+  }
+
+  .game-card .team-badge {
+    width    : 4.5rem;
+    height   : 4.5rem;
+    align-self: center;
+  }
+
+  .game-card small {
+    margin-top: auto;
+    color     : var(--color-palette-blue);
+  }
+
+  .game-card span {
+    align-self : flex-end;
+    font-size  : var(--font-size-xl);
+    line-height: 1;
+  }
+
+  .leader-ticker {
+    display              : grid;
+    align-items          : center;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    min-height           : 3.25rem;
+    margin-top           : calc(var(--spacing-xl) * 3);
+    padding-inline       : var(--spacing-lg);
+    border-radius        : var(--radius-xs);
+    background           : var(--color-palette-surface);
+    color                : var(--foreground);
+  }
+
+  @media (max-width: 90rem) {
+    .dashboard-stats-grid,
+    .dashboard-content-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-side-grid {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 64rem) {
+    .dashboard-stats-grid,
+    .dashboard-content-grid,
+    .dashboard-side-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .power-panel,
+    .standings-panel,
+    .dashboard-side-grid {
+      min-height: auto;
+    }
+  }
+
   .league-menu {
     display    : flex;
     align-items: center;
@@ -229,7 +543,8 @@
   }
 
   .sidebar {
-    padding-block: var(--component-sidebar-padding-block);
+    padding-block   : var(--component-sidebar-padding-block);
+    background-color: var(--color-palette-gray-400);
   }
 
   .sidebar-back-button {
