@@ -64,6 +64,9 @@
             "gray-300": {
                 "value": "#D1D5DB"
             },
+            "gray-400": {
+                "value": "#2D2D2D"
+            },
             "gray-500": {
                 "value": "#979797"
             },
