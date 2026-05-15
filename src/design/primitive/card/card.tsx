@@ -1,8 +1,9 @@
-import React from 'react'
+import type { ReactNode } from 'react'
+import { cn } from 'utility'
 
-const Card = ({ children }: { children: React.ReactNode }) => {
+const Card = ({ children, className }: { children: ReactNode, className?: string }) => {
   return (
-    <div className={'bg-gray-200 border border-gray-200 rounded-lg shadow-sm'} style={{ padding: `var(--spacing-md)` }}>{children}</div>
+    <section className={cn('card', className)}>{children}</section>
   )
 }
 
